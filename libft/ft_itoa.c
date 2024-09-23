@@ -6,7 +6,7 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 20:16:17 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/22 21:10:57 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/09/23 18:21:02 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,8 @@ char	*ft_itoa(int n)
 	char	*res;
 	int		len;
 	int		negative;
-	int		i;
 
 	negative = 0;
-	i = 0;
 	len = count_digits(n);
 	if (n < 0)
 		negative = 1;
@@ -57,9 +55,8 @@ char	*ft_itoa(int n)
 		}
 	}
 	return (res);
-	
 }
-
+/*
 int	main(void)
 {
 	int i;
@@ -70,4 +67,4 @@ int	main(void)
 	{
 		printf("%c", res[i++]);
 	}
-}
+}*/

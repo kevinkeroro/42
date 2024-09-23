@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 21:48:51 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/23 21:58:46 by klimayll         ###   ########.fr       */
+/*   Created: 2024/09/23 18:08:34 by klimayll          #+#    #+#             */
+/*   Updated: 2024/09/23 18:09:44 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	void	*preturn ;
-
-	preturn = malloc(nmemb * size);
-	if (preturn == NULL)
-		return (NULL);
-	ft_bzero(preturn, (size * nmemb));
-	return (preturn);
+    
 }

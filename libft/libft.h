@@ -6,7 +6,7 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 19:35:14 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/22 20:46:15 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/09/22 22:07:53 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
-char	*ft_itoa(int n);                                           // TODO
+char	*ft_itoa(int n);                                           // FIX
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char)); // TODO
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));     // TODO
 void	ft_putchar_fd(char c, int fd);

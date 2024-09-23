@@ -6,7 +6,7 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 16:38:58 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/21 22:34:57 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/09/23 18:20:19 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(res, &s1[start], (end - start + 1));
 	return (res);
 }
-
+/*
 int	main(void)
 {
 	int i;
@@ -44,4 +44,4 @@ int	main(void)
 		printf("%c", res[i]);
 		i++;
 	}
-}
+}*/

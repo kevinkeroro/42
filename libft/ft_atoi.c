@@ -6,7 +6,7 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 19:55:39 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/21 19:58:38 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/09/23 21:56:29 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_atoi(const char *nptr)
 	num = 0;
 	while (is_space(*nptr))
 		nptr++;
-	while (*nptr == '-' || *nptr == '+')
+	if (*nptr == '-' || *nptr == '+')
 	{
 		if (*nptr == '-')
 			mcount++;
