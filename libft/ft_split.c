@@ -6,7 +6,7 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 17:11:50 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/22 20:14:51 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/09/25 22:03:49 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,7 @@ char **ft_split(char const *s, char c)
     int i;
     int j;
 
-    //checks
     wcounter = count_words(s, c);
-    // +1 NULL array at the end
     res = (char **)malloc(sizeof(char *) * wcounter + 1);
     if(!res)
         return (NULL);
@@ -59,4 +57,7 @@ char **ft_split(char const *s, char c)
     }
     res[j] = NULL;
     return (res);
+
+    //aaaholaaaqueatal
+    //TODO CHECK FREE
 }

@@ -6,7 +6,7 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 20:16:17 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/23 18:21:02 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/09/24 21:09:29 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_itoa(int n)
 		negative = 1;
 	res = (char *)malloc(sizeof(char) * (len + 1));
 	if (!res)
-		return (NULL);	
+		return (NULL);
 	res[len-- - 1] = '\0';
 	while (len >= 0)
 	{

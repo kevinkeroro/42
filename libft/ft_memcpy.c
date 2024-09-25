@@ -6,7 +6,7 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 21:45:32 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/23 18:32:54 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/09/24 21:05:23 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*d;
 	char	*s;
 
-	if(!dest && !src)
+	if (!dest && !src)
 		return (NULL);
 	i = 0;
 	d = (char *)dest;

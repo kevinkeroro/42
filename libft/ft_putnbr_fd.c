@@ -6,7 +6,7 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 19:25:16 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/21 19:56:15 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/09/24 21:08:50 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long ln;
+	long	ln;
 
 	ln = n;
-
 	if (ln < 0)
 	{
 		ft_putchar_fd('-', fd);

@@ -6,7 +6,7 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 21:24:33 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/23 19:36:48 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/09/24 21:05:35 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s + i);
 		i++;
 	}
-	if(c == '\0')
+	if (c == '\0')
 		return ((char *)s + i);
 	return (0);
 }
