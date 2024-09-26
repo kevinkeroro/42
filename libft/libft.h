@@ -6,7 +6,7 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 19:35:14 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/25 23:20:01 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/09/26 20:28:44 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,10 @@ char				*ft_strdup(const char *s);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
-char	**ft_split(char const *s, char c);                         // FIX
-char	*ft_itoa(int n);                                           // FIX
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char)); // TODO
-void	ft_striteri(char *s, void (*f)(unsigned int, char *));     // TODO
+char				**ft_split(char const *s, char c);
+char				*ft_itoa(int n);
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
