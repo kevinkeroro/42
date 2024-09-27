@@ -6,7 +6,7 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 20:16:17 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/26 20:44:05 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/09/27 18:50:33 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	count_digits(int n)
 	int	len;
 
 	len = 0;
+	if (n == 0)
+		return (1);
 	if (n < 0)
 	{
 		len++;
@@ -35,35 +37,37 @@ char	*ft_itoa(int n)
 	char	*res;
 	int		len;
 
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	len = count_digits(n);
 	res = (char *)malloc(sizeof(char) * (len + 1));
 	if (!res)
 		return (NULL);
 	res[len--] = '\0';
-	while (len > 0)
+	if (n == 0)
+		res[0] = '0';
+	if (n < 0)
 	{
-		if (n < 0)
-		{
-			res[0] = '-';
-			n = -n;
-		}
-		else
-		{
-			res[len--] = (n % 10) + '0';
-			n /= 10;
-		}
+		res[0] = '-';
+		n = -n;
+	}
+	while (n != 0)
+	{
+		res[len--] = (n % 10) + '0';
+		n /= 10;
 	}
 	return (res);
 }
 
 /*int	main(void)
 {
-	int	i;
+	int i;
 	char *res;
-	res = ft_itoa(0);
+	res = ft_itoa(-9);
 	i = 0;
-	while(res[i])
+	while (res[i])
 	{
-		printf("%c", res[i++]);
+		printf("%c", res[i]);
+		i++;
 	}
 }*/

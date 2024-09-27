@@ -6,7 +6,7 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 17:11:50 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/26 20:04:57 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/09/27 22:35:49 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (s[i])
+	while (s[i] && count_words(s, c) != 0)
 	{
 		while (s[i] && s[i] == c)
 			i++;
@@ -68,3 +68,16 @@ char	**ft_split(char const *s, char c)
 	res[j] = NULL;
 	return (res);
 }
+
+/*int main()
+{
+	char **res;
+	int	i;
+
+	res = ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", '^');
+	while(res[i])
+	{
+		printf("%s \n",res[i++]);
+	}
+	printf("%s \n",res[i]);
+}*/

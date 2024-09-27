@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 22:20:00 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/27 22:02:29 by klimayll         ###   ########.fr       */
+/*   Created: 2024/09/27 15:55:22 by klimayll          #+#    #+#             */
+/*   Updated: 2024/09/27 16:04:09 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int	slen;
+	t_list	*new_lst;
+	t_list	*new_elem;
 
-	slen = ft_strlen(s);
-	while (slen >= 0)
+	if (!lst || !f)
+		return (NULL);
+	new_lst = NULL;
+	while (lst)
 	{
-		if (s[slen] == (char)c)
-			return ((char *)s + slen);
-		slen--;
+		new_elem = ft_lstnew(f(lst->content));
+		if (!new_elem)
+		{
+			ft_lstclear(&new_lst, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_lst, new_elem);
+		lst = lst->next;
 	}
-	return (0);
+	return (new_lst);
 }
-/*
-int	main(void)
-{
-	char	s[] = "abcdefgab";
-
-	printf("%s", ft_strrchr(s, 'a'));
-}
-*/
