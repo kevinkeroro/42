@@ -6,13 +6,13 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 17:11:50 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/27 22:35:49 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/09/28 20:56:55 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	words;
@@ -31,7 +31,7 @@ int	count_words(char const *s, char c)
 	return (words);
 }
 
-void	free_words(char **words, int num_words)
+static void	free_words(char **words, int num_words)
 {
 	int	i;
 
@@ -74,7 +74,7 @@ char	**ft_split(char const *s, char c)
 	char **res;
 	int	i;
 
-	res = ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", '^');
+	res = ft_split("hello!", ' ');
 	while(res[i])
 	{
 		printf("%s \n",res[i++]);

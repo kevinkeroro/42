@@ -6,13 +6,13 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 20:16:17 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/27 18:50:33 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/09/28 20:56:14 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_digits(int n)
+static int	count_digits(int n)
 {
 	int	len;
 
