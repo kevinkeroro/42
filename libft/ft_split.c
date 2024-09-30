@@ -6,7 +6,7 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 17:11:50 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/28 20:56:55 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/09/29 20:58:29 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,16 @@ static int	count_words(char const *s, char c)
 	return (words);
 }
 
-static void	free_words(char **words, int num_words)
+static void	free_words(char **words)
 {
 	int	i;
 
 	i = 0;
-	while (i < num_words)
-		free(words[i++]);
+	while (words[i])
+	{
+		free(words[i]);
+		i++;
+	}
 	free(words);
 }
 
@@ -63,7 +66,7 @@ char	**ft_split(char const *s, char c)
 		if (start < i)
 			res[j++] = ft_substr(s, start, (i - start));
 		if (!res[j - 1])
-			return (free_words(res, count_words(s, c)), NULL);
+			return (free_words(res), NULL);
 	}
 	res[j] = NULL;
 	return (res);
