@@ -6,7 +6,7 @@
 #    By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/16 19:15:11 by klimayll          #+#    #+#              #
-#    Updated: 2024/09/30 20:10:31 by klimayll         ###   ########.fr        #
+#    Updated: 2024/10/01 18:50:00 by klimayll         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ bonus: $(OBJS) $(BONUSOBJ)
 %.o: %.c
 	${CC} ${CFLAGS} ${INCLUDE} -c $< -o $@
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUSOBJ)
 fclean: clean
 	rm -f $(NAME)
 re: fclean all

@@ -6,14 +6,13 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 19:35:14 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/28 20:46:55 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:34:08 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
