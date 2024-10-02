@@ -6,7 +6,7 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 21:27:45 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/29 22:36:55 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/10/02 19:04:03 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 # include <stdlib.h>
 
 int ft_printf(char const *s, ...);
-void ft_format_type(char type, va_list args);
-void    ft_print_char(char c);
-void    ft_print_string(char *s);
-void    ft_print_number(int number);
+int ft_format_type(char type, va_list args);
+int    ft_print_char(char c);
+int    ft_print_string(char *s);
+int    ft_print_number(int number);
 #endif

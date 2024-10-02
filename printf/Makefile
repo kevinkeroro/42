@@ -6,7 +6,7 @@
 #    By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/29 21:18:27 by klimayll          #+#    #+#              #
-#    Updated: 2024/09/29 21:27:00 by klimayll         ###   ########.fr        #
+#    Updated: 2024/10/02 18:32:06 by klimayll         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = cc
 
 CFLAGS = -Wall -Werror -Wextra -c
 
-SRCS = ft_printf ft_printf_utils
+SRCS = ft_printf ft_printf_utils ft_print_char ft_print_string ft_print_number
 
 OBJS = $(SRCS:.c=.o)
 

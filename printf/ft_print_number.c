@@ -6,16 +6,18 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 22:27:31 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/29 22:36:11 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/10/02 19:04:23 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void    ft_print_number(int number)
+int    ft_print_number(int number)
 {
     long	ln;
+	int	i;
 
+	i = 0;
 	ln = number;
 	if (ln < 0)
 	{
@@ -24,5 +26,7 @@ void    ft_print_number(int number)
 	}
 	if (ln >= 10)
 		ft_print_number(ln / 10);
-	ft_print_char((ln % 10) + '0');
+	i += ft_print_char((ln % 10) + '0');
+
+	return (i);
 }

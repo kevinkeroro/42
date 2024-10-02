@@ -6,7 +6,7 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 21:34:26 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/29 22:38:32 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/10/02 19:06:21 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,20 @@
 int ft_printf(char const *s, ...){
     va_list args;
     int i;
-    
+    int len;
+
     i = 0;
     va_start(args, s);
     while(s[i])
     {
         if(s[i] == '%')
-            ft_format_type(s[++i], args);
+            len += ft_format_type(s[++i], args);
         else
-            write(1, &s[i], 1);
+            len += ft_print_char(&s[i]);
         i++;
     }
     va_end(args);
-    return (i);
+    return (len);
 }
 
 int main(void)

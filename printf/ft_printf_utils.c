@@ -6,26 +6,26 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 21:55:31 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/29 22:37:25 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/10/02 19:04:30 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void ft_format_type(char type, va_list args)
+int ft_format_type(char type, va_list args)
 {
     if(type == 'c')
-        ft_print_char(va_arg(args, int));
+        return((va_arg(args, int)));
     else if(type == 's')
-        ft_print_string(va_arg(args, char*));
+        return(ft_print_string(va_arg(args, char*)));
     else if(type == 'p')
-        printf("P");
+        return(1);
     else if(type == 'd' || type == 'i')
-        ft_print_number(va_arg(args, int));
+        return(ft_print_number(va_arg(args, int)));
     else if(type == 'u')
-        printf("U");
+        return(printf("U"));
     else if(type == 'x' || type == 'X')
-        printf("X");
+        return(printf("X"));
     else if(type == '%')
-        ft_print_char('%');
+        return(ft_print_char('%'));
 }

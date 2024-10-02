@@ -6,13 +6,14 @@
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 22:34:39 by klimayll          #+#    #+#             */
-/*   Updated: 2024/09/29 22:36:44 by klimayll         ###   ########.fr       */
+/*   Updated: 2024/10/02 19:02:29 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void    ft_print_char(char c)
+int ft_print_char(char c)
 {
     write(1, &c, 1);
+    return(1);
 }
