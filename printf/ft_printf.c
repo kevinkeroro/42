@@ -18,15 +18,12 @@ void ft_format_type(char type, va_list args, size_t *counter)
         ft_putchar(va_arg(args, int), counter);
     else if(type == 's')
         ft_putstr(va_arg(args, char*), counter);
-    else if(type == 'p')
-        return (0); //TODO
+    //else if(type == 'p')
     else if(type == 'd' || type == 'i')
         ft_putnbr(va_arg(args, int), counter);
-    else if(type == 'u')
-        return (0); //TODO
+    //else if(type == 'u')
     else if(type == 'x' || type == 'X')
-        return (0); //TODO
-    else if(type == '%')
+    //else if(type == '%')
         ft_putchar('%', counter);
 }
 
@@ -42,9 +39,14 @@ int ft_printf(char const *s, ...){
     while(*s)
     {
         if(*s == '%')
-            ft_format_type(*++s, args, &counter); //TODO Test if it works *++s
+        {
+            s++;
+            ft_format_type(*s, args, &counter); //TODO Test if it works *++s
+        }
         else
+        {
             ft_putchar(*s, &counter);
+        }
         s++;
     }
     va_end(args);
