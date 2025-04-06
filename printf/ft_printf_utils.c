@@ -12,20 +12,4 @@
 
 #include "ft_printf.h"
 
-int ft_format_type(char type, va_list args)
-{
-    if(type == 'c')
-        return((va_arg(args, int)));
-    else if(type == 's')
-        return(ft_print_string(va_arg(args, char*)));
-    else if(type == 'p')
-        return(1);
-    else if(type == 'd' || type == 'i')
-        return(ft_print_number(va_arg(args, int)));
-    else if(type == 'u')
-        return(printf("U"));
-    else if(type == 'x' || type == 'X')
-        return(printf("X"));
-    else if(type == '%')
-        return(ft_print_char('%'));
-}
+//TODO

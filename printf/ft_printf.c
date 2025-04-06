@@ -12,23 +12,43 @@
 
 #include "ft_printf.h"
 
+void ft_format_type(char type, va_list args, size_t *counter)
+{
+    if(type == 'c')
+        ft_putchar(va_arg(args, int), counter);
+    else if(type == 's')
+        ft_putstr(va_arg(args, char*), counter);
+    else if(type == 'p')
+        return (0); //TODO
+    else if(type == 'd' || type == 'i')
+        ft_putnbr(va_arg(args, int), counter);
+    else if(type == 'u')
+        return (0); //TODO
+    else if(type == 'x' || type == 'X')
+        return (0); //TODO
+    else if(type == '%')
+        ft_putchar('%', counter);
+}
+
 int ft_printf(char const *s, ...){
     va_list args;
-    int i;
-    int len;
+    size_t counter;
+    va_start(args, s); 
 
-    i = 0;
-    va_start(args, s);
-    while(s[i])
+    if(!s)
+        return (0);
+    counter = 0;
+    
+    while(*s)
     {
-        if(s[i] == '%')
-            len += ft_format_type(s[++i], args);
+        if(*s == '%')
+            ft_format_type(*++s, args, &counter); //TODO Test if it works *++s
         else
-            len += ft_print_char(&s[i]);
-        i++;
+            ft_putchar(*s, &counter);
+        s++;
     }
     va_end(args);
-    return (len);
+    return (counter);
 }
 
 int main(void)

@@ -19,8 +19,10 @@
 # include <stdlib.h>
 
 int ft_printf(char const *s, ...);
-int ft_format_type(char type, va_list args);
-int    ft_print_char(char c);
-int    ft_print_string(char *s);
-int    ft_print_number(int number);
+
+void    ft_format_type(char type, va_list args, size_t *counter);
+void    ft_putchar(int c, size_t *counter);
+void    ft_putnbr(int number, size_t *counter);  
+void    ft_putstr(char *s, size_t *counter);
+
 #endif

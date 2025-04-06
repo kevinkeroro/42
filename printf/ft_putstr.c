@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_number.c                                  :+:      :+:    :+:   */
+/*   ft_putstr.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: klimayll <klimayll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/29 22:27:31 by klimayll          #+#    #+#             */
-/*   Updated: 2024/10/02 19:04:23 by klimayll         ###   ########.fr       */
+/*   Created: 2024/09/29 22:21:04 by klimayll          #+#    #+#             */
+/*   Updated: 2024/10/02 19:03:44 by klimayll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int    ft_print_number(int number)
+void ft_putstr(char *s, size_t *counter)
 {
-    long	ln;
-	int	i;
-
-	i = 0;
-	ln = number;
-	if (ln < 0)
-	{
-		ft_print_char('-');
-		ln = -ln;
-	}
-	if (ln >= 10)
-		ft_print_number(ln / 10);
-	i += ft_print_char((ln % 10) + '0');
-
-	return (i);
+    if (!s)
+        s = "(null)";
+    while(*s)
+    {
+        ft_putchar(*s++, counter);
+    }
 }
